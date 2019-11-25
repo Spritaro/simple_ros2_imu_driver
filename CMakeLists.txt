@@ -35,8 +35,12 @@ endif()
 add_executable(i2c_mpu6050_node src/i2c_mpu6050_node.cpp)
 ament_target_dependencies(i2c_mpu6050_node rclcpp sensor_msgs)
 
+add_executable(i2c_icm42605_node src/i2c_icm42605_node.cpp)
+ament_target_dependencies(i2c_icm42605_node rclcpp sensor_msgs)
+
 install(TARGETS
   i2c_mpu6050_node
+  i2c_icm42605_node
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
